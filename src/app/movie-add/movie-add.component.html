@@ -1,0 +1,27 @@
+
+<div>
+<p>
+  Dodaj film
+</p>
+<form autocomplete="off" (ngSubmit)="addMovie()">
+
+  <label for="title">Tytuł:</label>
+  <input [(ngModel)]="movie.title" placeholder="title" name="title">
+  <br>
+
+  <label for="year">Rok:</label>
+  <input type="number" [(ngModel)]="movie.year" placeholder="year" name="year">
+  <br>
+
+  <label for="image">Zdjęcie:</label>
+  <input [(ngModel)]="movie.image" placeholder="image" name="image">
+  <br>
+
+  <label for="description">Opis:</label>
+  <textarea [(ngModel)]="movie.description" placeholder="description" name="description"></textarea>
+  <br>
+
+  <button type="submit">Dodaj</button>
+
+</form>
+</div>

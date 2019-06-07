@@ -1,0 +1,33 @@
+input{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: 24px;
+}
+
+label, button{
+    margin-left: 20px;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+div{
+    background-color: darkslateblue;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+textarea{
+    margin-left: 40px;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-top: 15px;
+}
