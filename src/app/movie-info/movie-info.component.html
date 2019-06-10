@@ -1,18 +1,19 @@
 
-<div>
+<div class="all" *ngIf="movie">
   <div class="image">
-    <img>
+    <img src={{movie.image}}>
   </div>
   <div class="info">
     
-    <div><p>Tytuł: </p>
-    
+    <div><p>Tytuł: {{movie.title}}</p>
+     
   </div>
-    <div><p>Rok: </p>
-    
+    <div><p>Rok: {{movie.year}}</p>
+     
   </div>
   <div>
-    <p>Opis: </p>
+    <p>Opis: </p> 
+    {{movie.description}}
   </div>
   </div>
 </div>

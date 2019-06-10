@@ -4,7 +4,7 @@
   Najnowsze filmy:
 </p>
 <ul>
-  <li *ngFor = "let movie of movies"><img src={{movie.image}}><a>{{movie.title}}</a></li>
+  <li *ngFor = "let movie of movies" [routerLink]="['/filmy', movie.id]"><img src={{movie.image}}><a>{{movie.title  | slice:0:22}}</a></li>
 </ul>
 <p>
   Najnowsze seriale:

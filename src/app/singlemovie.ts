@@ -3,4 +3,5 @@ export class Singlemovie {
     title: string;
     year: number;
     description: string;
+    image: string;
 }

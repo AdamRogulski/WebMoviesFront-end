@@ -21,4 +21,8 @@ export class MovieService {
   saveMovie(movie: Object): Observable<Object> {
     return this.http.post('//localhost:8080/filmy/dodaj', movie);
   }
+
+  getOne(movieId): Observable<any>{
+    return this.http.get('//localhost:8080/filmy/' + movieId);
+  }
 }

@@ -18,7 +18,7 @@ export class MovieAddComponent implements OnInit {
 
   addMovie(): void {
     this.movieService.saveMovie(this.movie).subscribe( data => {
-      alert('Movie created successfully');
+      alert('Movie added successfully');
     });
   }
 }
