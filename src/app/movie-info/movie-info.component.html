@@ -5,15 +5,26 @@
   </div>
   <div class="info">
     
-    <div><p>Tytuł: {{movie.title}}</p>
+    <form>
+    <div><p>Tytuł: <span *ngIf="!editMode"> {{movie.title}} </span>
+      <span *ngIf="editMode"><input [(ngModel)]="movie.title" value={{movie.title}} name="title" ></span></p>
      
+      <button (click)=delete()>Usuń</button>
+      <button (click)="editMode = true" *ngIf="!editMode">Edytuj</button>
+      <button (click)="editMode = false" *ngIf="editMode">Wróć</button>
+      <button type="submit" (click)="editMode = false; update()" *ngIf="editMode"> Zapisz</button>
+      <br>
+      <span *ngIf="editMode"><p>Zdjęcie: <input [(ngModel)]="movie.image"  value={{movie.image}} name=image > </p></span>
   </div>
-    <div><p>Rok: {{movie.year}}</p>
-     
+    <div><p>Rok: <span *ngIf="!editMode">{{movie.year}}</span>
+      <span *ngIf="editMode"><input [(ngModel)]="movie.year" value={{movie.year}} type="number" name=year></span></p>
+
   </div>
   <div>
     <p>Opis: </p> 
-    {{movie.description}}
+    <span *ngIf="!editMode">{{movie.description}}</span>
+    <span *ngIf=editMode> <textarea [(ngModel)]="movie.description" value={{movie.description}} name="description" ></textarea></span>
   </div>
+   </form>
   </div>
 </div>

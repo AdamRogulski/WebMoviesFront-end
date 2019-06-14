@@ -3,7 +3,7 @@
 <p>
   Dodaj film
 </p>
-<form autocomplete="off" (ngSubmit)="addMovie()">
+<form autocomplete="off" (ngSubmit)="addMovie()" method="POST">
 
   <label for="title">Tytuł:</label>
   <input [(ngModel)]="movie.title" placeholder="title" name="title">

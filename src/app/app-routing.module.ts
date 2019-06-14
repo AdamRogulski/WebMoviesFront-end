@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'filmy', component: MovieComponent},
   { path: 'seriale', component: SerieComponent},
   { path: 'filmy/:id', component: MovieInfoComponent},
-  { path: 'filmy/dodaj', component: MovieAddComponent}
+  { path: 'dodaj', component: MovieAddComponent}
 ];
 
 @NgModule({

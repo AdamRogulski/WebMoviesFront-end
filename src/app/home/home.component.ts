@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { Singlemovie } from '../singlemovie';
+import { TvshowService } from '../tvshow.service';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,16 @@ import { Singlemovie } from '../singlemovie';
 export class HomeComponent implements OnInit {
 
   movies: Array<any>;
-  selctedMovie: Singlemovie;
+  tvshows: Array<any>;
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private tvshowService: TvshowService) { }
 
   ngOnInit() {
     this.movieService.getAll().subscribe( data => {
       this.movies = data;
+    }),
+    this.tvshowService.getAllShows().subscribe( tvdata => {
+      this.tvshows = tvdata;
     });
   }
-
-
 }

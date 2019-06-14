@@ -3,19 +3,19 @@
 }
 
 img{
-    width: 250px;
+    width: 300px;
     height: 400px;
 }
 
 .image{
     float: left;
     margin-left: 20px;
-    width: 300px;
+    width: 350px;
 }
 
 .info{
     float: left;
-    width: 1100px;
+    width: 1050px;
     border-radius: 10px;
     background-color: #333;
 }
@@ -26,4 +26,26 @@ img{
     margin-right: 20px;
     margin-top: 30px;
     font-size: 21px;
+}
+
+button{ 
+    margin-left: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: blueviolet;
+    border: none;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+textarea{
+    margin-left: 40px;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 20px;
 }

@@ -18,11 +18,20 @@ export class MovieService {
     return this.http.get('//localhost:8080/filmy');
   }
 
-  saveMovie(movie: Object): Observable<Object> {
-    return this.http.post('//localhost:8080/filmy/dodaj', movie);
+  saveMovie(movie: object): Observable<string> {
+    return this.http.post('//localhost:8080/filmy/dodaj', movie, {responseType: 'text'});
   }
 
-  getOne(movieId): Observable<any>{
+  getOne(movieId): Observable<any> {
     return this.http.get('//localhost:8080/filmy/' + movieId);
   }
+
+  deleteMovie(movieId): Observable<any>{
+    return this.http.delete('//localhost:8080/filmy/' + movieId, {responseType: 'text'});
+  }
+
+  updateMovie(movieId, movie: object): Observable<string>{
+    return this.http.put('//localhost:8080/filmy/' + movieId, movie, {responseType: 'text'});
+  }
 }
+
