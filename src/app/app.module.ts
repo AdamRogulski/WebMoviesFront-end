@@ -9,8 +9,9 @@ import { SerieComponent } from './serie/serie.component';
 import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieAddComponent } from './movie-add/movie-add.component';
+import { MediaAddComponent } from './media-add/media-add.component';
 import { FormsModule } from '@angular/forms';
+import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
 
 
 
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     SerieComponent,
     HomeComponent,
     MovieInfoComponent,
-    MovieAddComponent
+    MediaAddComponent,
+    TvshowInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Singlemovie } from '../singlemovie';
-import { MovieService } from '../movie.service';
+import { Singlemovie } from '../model/singlemovie';
+import { MovieService } from '../services/movie.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -22,11 +22,11 @@ export class MovieInfoComponent implements OnInit {
   }
 
   delete() {
-    if(confirm("Czy na pewno chcesz usunąć " +this.movie.title)) {
+    if (confirm('Czy na pewno chcesz usunąć ' + this.movie.title)) {
     this.route.paramMap.subscribe( params => {
       this.movieService.deleteMovie(params.get('id')).subscribe( m =>
         alert('Usunięto'));
-    });}
+    }); }
   }
 
   update() {

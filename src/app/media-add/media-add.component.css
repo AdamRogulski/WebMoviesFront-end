@@ -5,7 +5,14 @@ input{
     height: 24px;
 }
 
-label, button{
+.buttons button{
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+   }
+
+label, .submitButton{
     margin-left: 20px;
     font-size: 25px;
     display: block;
@@ -14,11 +21,13 @@ label, button{
 
 div{
     background-color: darkslateblue;
+    margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
     width: 60%;
-    height: 600px;
+    height: auto;
     border-radius: 10px;
+    padding-bottom: 20px;
 }
 
 textarea{
@@ -31,3 +40,4 @@ textarea{
 p{
     margin-top: 15px;
 }
+

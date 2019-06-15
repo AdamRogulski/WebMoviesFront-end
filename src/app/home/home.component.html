@@ -4,12 +4,12 @@
   Najnowsze filmy:
 </p>
 <ul>
-  <li *ngFor = "let movie of movies" [routerLink]="['/filmy', movie.id]"><img src={{movie.image}}><a>{{movie.title  | slice:0:22}}</a></li>
+  <li *ngFor = "let movie of movies" [routerLink]="['/filmy', movie.id]"><img src={{movie.image}}><a>{{movie.title  | slice:0:20}}</a></li>
 </ul>
 <p>
   Najnowsze seriale:
 </p>
 <ul>
-  <li *ngFor = "let show of tvshows"><img src={{show.image}}><a>{{show.title}}</a></li>
+  <li *ngFor = "let show of tvshows " [routerLink]="['/seriale',show.id]"><img src={{show.image}}><a>{{show.title | slice:0:20}}</a></li>
 </ul>
 </div>

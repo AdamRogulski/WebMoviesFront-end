@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Singlemovie } from './singlemovie';
+import { Singlemovie } from '../model/singlemovie';
 import { HttpHeaders } from '@angular/common/http';
 
 
@@ -26,11 +26,11 @@ export class MovieService {
     return this.http.get('//localhost:8080/filmy/' + movieId);
   }
 
-  deleteMovie(movieId): Observable<any>{
+  deleteMovie(movieId): Observable<any> {
     return this.http.delete('//localhost:8080/filmy/' + movieId, {responseType: 'text'});
   }
 
-  updateMovie(movieId, movie: object): Observable<string>{
+  updateMovie(movieId, movie: object): Observable<string> {
     return this.http.put('//localhost:8080/filmy/' + movieId, movie, {responseType: 'text'});
   }
 }

@@ -1,9 +1,11 @@
 ul{
     list-style-type: none;
-    overflow: auto;
+    display: block;
+    overflow-x: auto;
    margin-bottom: 40px;
    white-space: nowrap;
    padding-left: 0px;
+   
 }
 
 li {

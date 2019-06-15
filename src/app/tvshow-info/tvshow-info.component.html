@@ -1,0 +1,34 @@
+<div class="all" *ngIf="tvshow">
+  <div class="image">
+    <img src={{tvshow.image}}>
+  </div>
+  <div class="info">
+    
+    <form>
+    <div><p>Tytuł: <span *ngIf="!editMode"> {{tvshow.title}} </span>
+      <span *ngIf="editMode"><input [(ngModel)]="tvshow.title" value={{tvshow.title}} name="title" ></span></p>
+     
+      <button (click)="deleteShow()" >Usuń</button>
+      <button (click)="editMode = true" *ngIf="!editMode">Edytuj</button>
+      <button (click)="editMode = false" *ngIf="editMode">Wróć</button>
+      <button type="submit" (click)="editMode = false; updateShow()" *ngIf="editMode"> Zapisz</button>
+      <br>
+      <span *ngIf="editMode"><p>Zdjęcie: <input [(ngModel)]="tvshow.image"  value={{tvshow.image}} name=image > </p></span>
+    </div>
+  
+    <div><p>Rok: <span *ngIf="!editMode">{{tvshow.year}}</span>
+      <span *ngIf="editMode"><input [(ngModel)]="tvshow.year" value={{tvshow.year}} type="number" name=year></span></p>
+    </div>
+
+    <div>
+      <p>Odcinki: <span *ngIf="!editMode">{{tvshow.episodes}}</span>
+      <span *ngIf="editMode"><input [(ngModel)]="tvshow.episodes" value={{tvshow.episodes}} type="number" name=episodes></span></p>
+    </div>  
+    <div>
+      <p>Opis: </p> 
+      <span *ngIf="!editMode">{{tvshow.description}}</span>
+      <span *ngIf=editMode> <textarea [(ngModel)]="tvshow.description" value={{tvshow.description}} name="description" ></textarea></span>
+    </div>
+    </form>
+  </div>
+</div>
