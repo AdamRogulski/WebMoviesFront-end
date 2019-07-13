@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
 import { MediaAddComponent } from './media-add/media-add.component';
 import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'seriale', component: SerieComponent},
   { path: 'filmy/:id', component: MovieInfoComponent},
   { path: 'dodaj', component: MediaAddComponent},
-  { path: 'seriale/:id', component: TvshowInfoComponent}
+  { path: 'seriale/:id', component: TvshowInfoComponent},
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

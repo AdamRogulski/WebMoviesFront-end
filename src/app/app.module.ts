@@ -8,10 +8,12 @@ import { MovieComponent } from './movie/movie.component';
 import { SerieComponent } from './serie/serie.component';
 import { HomeComponent } from './home/home.component';
 import { MovieInfoComponent } from './movie-info/movie-info.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MediaAddComponent } from './media-add/media-add.component';
 import { FormsModule } from '@angular/forms';
 import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
+import { LoginComponent } from './login/login.component';
+import { BasicHttpInterceptorService } from './services/basic-http-interceptor.service';
 
 
 
@@ -24,7 +26,8 @@ import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
     HomeComponent,
     MovieInfoComponent,
     MediaAddComponent,
-    TvshowInfoComponent
+    TvshowInfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,11 @@ import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS, useClass: BasicHttpInterceptorService, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
