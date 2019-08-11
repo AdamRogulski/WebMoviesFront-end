@@ -17,7 +17,7 @@ img{
     float: left;
     width: 1050px;
     border-radius: 10px;
-    background-color: #333;
+    background-color: rgb(18, 77, 167);
 }
 
 .info div{
@@ -43,9 +43,27 @@ input{
     margin-left: 20px;
 }
 
-textarea{
+ form textarea{
     margin-left: 40px;
     width: 800px;
     height: 100px;
     margin-bottom: 20px;
 }
+
+select{
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.showOpinion p{
+    font-size: 18px;
+}
+
+.showOpinion textarea{ 
+    width: 500px;
+}
+
+.showOpinion div{ 
+    float: left;
+}
+

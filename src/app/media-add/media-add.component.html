@@ -1,8 +1,8 @@
 
 <div>
 <span class="buttons">
-  <button (click)="movieButton = true; tvShowButton = false">Film</button>
-  <button (click)="movieButton = false; tvShowButton = true">Serial</button>
+  <button mat-raised-button (click)="movieButton = true; tvShowButton = false">Film</button>
+  <button mat-raised-button  (click)="movieButton = false; tvShowButton = true">Serial</button>
 </span>
 <form autocomplete="off" (ngSubmit)="addMovie()" method="POST" *ngIf="movieButton">
 
@@ -22,7 +22,7 @@
   <textarea [(ngModel)]="movie.description" placeholder="description" name="description"></textarea>
   <br>
 
-  <button class="submitButton" type="submit">Dodaj</button>
+  <button mat-raised-button class="submitButton" type="submit">Dodaj</button>
 
 </form>
 <form autocomplete="off" (ngSubmit)="addShow()" method="POST" *ngIf="tvShowButton">
@@ -47,7 +47,7 @@
     <textarea [(ngModel)]="tvshow.description" placeholder="description" name="description"></textarea>
     <br>
   
-    <button class="submitButton" type="submit">Dodaj</button>
+    <button mat-raised-button class="submitButton" type="submit">Dodaj</button>
   
   </form>
 

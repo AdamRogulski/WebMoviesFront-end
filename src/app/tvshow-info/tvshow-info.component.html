@@ -7,13 +7,14 @@
     <form>
     <div><p>Tytuł: <span *ngIf="!editMode"> {{tvshow.title}} </span>
       <span *ngIf="editMode"><input [(ngModel)]="tvshow.title" value={{tvshow.title}} name="title" ></span></p>
-     
+      <div *ngIf="isUserLogged">
       <button (click)="deleteShow()" >Usuń</button>
       <button (click)="editMode = true" *ngIf="!editMode">Edytuj</button>
       <button (click)="editMode = false" *ngIf="editMode">Wróć</button>
       <button type="submit" (click)="editMode = false; updateShow()" *ngIf="editMode"> Zapisz</button>
       <br>
       <span *ngIf="editMode"><p>Zdjęcie: <input [(ngModel)]="tvshow.image"  value={{tvshow.image}} name=image > </p></span>
+    </div>
     </div>
   
     <div><p>Rok: <span *ngIf="!editMode">{{tvshow.year}}</span>
@@ -30,5 +31,37 @@
       <span *ngIf=editMode> <textarea [(ngModel)]="tvshow.description" value={{tvshow.description}} name="description" ></textarea></span>
     </div>
     </form>
+    <div *ngIf="isUserLogged" class="showOpinion" >
+      <form *ngIf="!editMode">
+        <div>
+    <p>Dodaj Komentarz</p>
+    <textarea [(ngModel)]="myshow.comment" name=comment></textarea>
+  </div>
+  <div>
+    <p>Oceń</p>
+    <select [(ngModel)]="myshow.rating" name="rating" >
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      </select>
+    <p>Ustal status</p>
+    <select [(ngModel)]="myshow.status" name="status">
+      <option value="Obejrzano">Obejrzano</option>
+      <option value="Do obejrzenia">Do obejrzenia</option>
+      <option value="Porzucono">Porzucono</option>
+      <option value="W trakcie">W trakcie</option>
+
+    </select>
+    <button (click)="addCommentRateStatus()">Dodaj</button>
+  </div>
+  </form>
+  </div>
   </div>
 </div>

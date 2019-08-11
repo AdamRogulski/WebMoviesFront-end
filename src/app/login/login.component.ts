@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { LoginUser } from '../model/login-user';
 import { Router } from '@angular/router';
-import { NavComponent } from '../nav/nav.component';
 import { DatasharingService } from '../services/datasharing.service';
 
 @Component({

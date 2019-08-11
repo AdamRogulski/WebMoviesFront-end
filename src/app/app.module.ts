@@ -14,6 +14,14 @@ import { FormsModule } from '@angular/forms';
 import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
 import { LoginComponent } from './login/login.component';
 import { BasicHttpInterceptorService } from './services/basic-http-interceptor.service';
+import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -33,7 +41,15 @@ import { BasicHttpInterceptorService } from './services/basic-http-interceptor.s
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [
     {

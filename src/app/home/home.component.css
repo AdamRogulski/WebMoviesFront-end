@@ -32,6 +32,7 @@ img {
     height: 200px;
     /* float: left; */
     margin-left: 25px;
+    margin-right: 25px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -50,12 +51,14 @@ a{
 ::-webkit-scrollbar-thumb{
     background-color: rgb(94, 99, 99);
     border-radius: 5px;
+
 }
 
 div{
-    background-color: darkslateblue;
+    background-color: rgb(18, 77, 167);
     height: auto;
     margin-right: 5%;
     margin-left: 5%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    text-align: center;
 }

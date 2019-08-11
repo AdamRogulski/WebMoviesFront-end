@@ -29,6 +29,17 @@ export class TvshowService {
     return this.http.post('//localhost:8080/seriale/dodaj', show, { responseType: 'text'});
   }
 
+  getUserActivity(): Observable<any> {
+    return this.http.get('//localhost:8080/user/seriale/activity');
+  }
+
+  addMyShow(myshowId, myshow: object): Observable<string> {
+    return this.http.post('//localhost:8080/addmyshow/' + myshowId, myshow,  { responseType: 'text'});
+  }
+
+  deleteMyShow(myshowId: number): Observable<string> {
+  return this.http.delete('//localhost:8080/deletemyshow/' + myshowId,  { responseType: 'text'});
+  }
 }
 
 

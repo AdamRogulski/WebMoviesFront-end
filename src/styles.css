@@ -1,10 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 p {
     font-size: 25px;
     margin-left: 10px;
 }
 
 body{
-     background-color: black;
+     background-color: rgb(44, 42, 42);
      color: white;
+     font-family: 'Playfair Display', serif;
+
 }

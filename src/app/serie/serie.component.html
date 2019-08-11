@@ -1,3 +1,31 @@
 <p>
   Twoje seriale:
 </p>
+  <!-- <div *ngFor="let activ of showActivity" class="activity">
+    <span>Tytuł: <a [routerLink]="['/seriale',activ.tvShow.id]">{{activ.tvShow.title}}</a></span>
+  <span>Ocena: {{activ.rate}}/10</span>
+  <span>Status: {{activ.status}}</span>
+  <span>Komentarz: {{activ.comment}}</span>
+  </div> -->
+
+  <div class="container">
+    <mat-accordion *ngFor="let activ of showActivity">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+           {{activ.tvShow.title}}
+          </mat-panel-title>
+          <mat-panel-description>
+            Ocena: {{activ.rate}}/10
+          </mat-panel-description>
+          <mat-panel-description>
+           Status: {{activ.status}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Komentarz: {{activ.comment}}</p>
+      
+        <p>Obejrzane odcinki: x/{{activ.tvShow.episodes}}</p>
+        <span class="right"><button (click)="delete(activ.id)"><i class="material-icons">clear</i></button></span>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
