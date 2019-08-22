@@ -1,0 +1,13 @@
+<ul>
+  <li><a routerLink = ""> Home</a></li>
+  <li *ngIf="isUserLogged"><a routerLink = "filmy">Filmy</a></li>
+  <li *ngIf="isUserLogged"><a routerLink = "seriale">Seriale</a></li>
+  <li *ngIf="isUserLogged" class="add"><a >Zalogowano jako {{user}}</a></li>
+  <li *ngIf="role=='ROLE_ADMIN'" class="add"><a routerLink = "dodaj">Dodaj</a></li>
+  <li *ngIf="!isUserLogged" class="add"><a routerLink = "login">Zaloguj</a></li>
+  <li *ngIf="isUserLogged" class="add"><a (click)="logout()">Wyloguj</a></li>
+  <form>
+  <li class="add"><button (click)="search()"><i class="material-icons">search</i></button></li>
+  <li class="searchInput"><input placeholder="szukaj" name="searchInput" [(ngModel)]="searchInput"></li>
+  </form>
+</ul>

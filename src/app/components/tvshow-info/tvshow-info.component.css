@@ -1,0 +1,111 @@
+.all{
+    margin-top: 40px;
+    display: flex;
+}
+
+img{
+    width: 300px;
+    height: 400px;
+}
+
+p{
+  font-size: 20px;
+}
+
+.image{
+    float: left;
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.image img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info{
+    float: left;
+    width: 1050px;
+    /* border-radius: 10px; */
+    background-color: rgb(23, 36, 54);
+    /* border: 2px solid blue; */
+
+}
+
+.info div{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+button{
+    margin-left: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: gold;
+    border: none;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+ form textarea{
+    margin-left: 40px;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+select{
+    margin-left: 40px;
+    font-size: 15px;
+    background-color: rgb(34, 32, 32);
+    border: none;
+    color: white;
+}
+
+.showOpinion p{
+    font-size: 15px;
+}
+
+.showOpinion textarea{
+    width: 550px;
+    resize: none;
+    background-color: rgb(34, 32, 32);
+    border: none;
+    color: white;
+}
+
+.showOpinion{
+  display: flex;
+}
+
+.showOpinion div{
+    float: left;
+    /* display: flex; */
+}
+
+
+.singleComment{
+    background-color: rgb(34, 32, 32);
+    border-radius: 10px;
+    padding-left: 20px;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.singleComment span{
+    font-size: 16px;
+}
+
+.comments p{
+    font-size: 12px;
+}

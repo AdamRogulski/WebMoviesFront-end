@@ -1,0 +1,27 @@
+
+
+<div class="container">
+  <p>Znalezione filmy:</p>
+  <p *ngIf="foundMovies.length===0">Nie znaleziono filmów!</p>
+  <div class="result">
+ <a *ngFor = "let foundM of foundMovies " [routerLink]="['/filmy', foundM.id]" class="mediaFound">
+<img src={{foundM.image}}>
+<div class="description">
+<a>Tytuł: {{foundM.title}} </a>
+<p>Rok: {{foundM.year}}</p>
+</div>
+</a>
+</div>
+ <p>Znalezione seriale:</p>
+ <p *ngIf="foundTVShows.length===0">Nie znaleziono seriali!</p>
+ <div class="result">
+ <a *ngFor = "let foundTV of foundTVShows " [routerLink]="['/seriale', foundTV.id]" class="mediaFound">
+  <img src={{foundTV.image}}>
+  <div class="description">
+  <a>Tytuł: {{foundTV.title}}</a>
+  <p>Rok: {{foundTV.year}}</p>
+</div>
+
+</a>
+ </div>
+</div>

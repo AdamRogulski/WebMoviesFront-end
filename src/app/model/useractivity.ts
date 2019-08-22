@@ -1,5 +1,6 @@
 export class Useractivity {
     comment: string;
-    rate: number;
+    rating: number;
     status: string;
+    creationTime: string;
 }

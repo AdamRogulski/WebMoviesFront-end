@@ -1,0 +1,52 @@
+div{
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(177, 77, 19);
+    border-radius: 10px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+input{
+    height: 30px;
+    width: 40%;
+    border-radius: 5px;
+    background-color: rgb(143, 29, 29);
+    float: left;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: block;
+    border: none;
+}
+
+
+button{
+    margin-left: 40%;
+    margin-right: 40%;
+    float: left;
+    margin-top: 25px;
+    width: 150px;
+    height: 40px;
+}
+
+form a{
+  float: left;
+  cursor: pointer;
+  margin-left: 30%;
+  margin-top: 5%;
+  font-size: 20px;
+
+}

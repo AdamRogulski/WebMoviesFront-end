@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { MovieComponent } from './movie/movie.component';
-import { SerieComponent } from './serie/serie.component';
-import { HomeComponent } from './home/home.component';
-import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { NavComponent } from './components/nav/nav.component';
+import { MovieComponent } from './components/movie/movie.component';
+import { TVShowComponent} from './components/tvshow/tvshow.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { MediaAddComponent } from './media-add/media-add.component';
+import { MediaAddComponent } from './components/media-add/media-add.component';
 import { FormsModule } from '@angular/forms';
-import { TvshowInfoComponent } from './tvshow-info/tvshow-info.component';
-import { LoginComponent } from './login/login.component';
+import { TvshowInfoComponent } from './components/tvshow-info/tvshow-info.component';
+import { LoginComponent } from './components/login/login.component';
 import { BasicHttpInterceptorService } from './services/basic-http-interceptor.service';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -30,12 +31,13 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     NavComponent,
     MovieComponent,
-    SerieComponent,
+    TVShowComponent,
     HomeComponent,
     MovieInfoComponent,
     MediaAddComponent,
     TvshowInfoComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

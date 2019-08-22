@@ -1,9 +1,0 @@
-<ul>
-  <li><a routerLink = ""> Home</a></li>
-  <li *ngIf="isUserLogged"><a routerLink = "filmy">Filmy</a></li>
-  <li *ngIf="isUserLogged"><a routerLink = "seriale">Seriale</a></li>
-  <li *ngIf="isUserLogged" class="add"><a >Zalogowano jako {{user}}</a></li>
-  <li *ngIf="isUserLogged" class="add"><a routerLink = "dodaj">Dodaj</a></li>
-  <li *ngIf="!isUserLogged" class="add"><a routerLink = "login">Zaloguj</a></li>
-  <li *ngIf="isUserLogged" class="add"><a (click)="logout()">Wyloguj</a></li>
-</ul>

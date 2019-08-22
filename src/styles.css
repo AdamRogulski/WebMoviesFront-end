@@ -1,5 +1,6 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 p {
     font-size: 25px;
     margin-left: 10px;

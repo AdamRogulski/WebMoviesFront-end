@@ -1,0 +1,58 @@
+.container{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 15px;
+    height: 800px;
+    width: 86%;
+    background-color: rgb(26, 26, 22);
+}
+
+.activity{
+    height: 60px;
+    width: 100%;
+    background-color: gold;
+    margin-bottom: 15px;
+}
+
+span{
+    margin-top: 20px;
+    font-size: 20px;
+    float: left;
+    margin-left: 3%;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+mat-expansion-panel p{
+    float: left;
+}
+
+.right{
+    float: right;
+
+}
+
+mat-expansion-panel{
+    margin-bottom: 15px;
+    background-color: gold;
+    margin-top: 15px;
+}
+
+mat-expansion-panel p{
+    width: 50%;
+    font-size: 16px;
+    display: block;
+    float: left;
+}
+

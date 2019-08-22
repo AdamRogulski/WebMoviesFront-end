@@ -1,0 +1,31 @@
+
+<div class="all">
+  <div class="mediaLists">
+<p>
+  Najnowsze filmy:
+</p>
+<ul>
+  <li *ngFor = "let movie of movies" [routerLink]="['/filmy', movie.id]"><img src={{movie.image}}><a>{{movie.title  | slice:0:19}}</a></li>
+</ul>
+<p>
+  Najnowsze seriale:
+</p>
+<ul>
+  <li *ngFor = "let show of tvshows " [routerLink]="['/seriale',show.id]"><img src={{show.image}}><a>{{show.title | slice:0:19}}</a></li>
+</ul>
+</div>
+<div class="flexContainer">
+<div class="recentComments">
+ <p> Najnowsza aktywność  w sekcji filmów:</p>
+ <ul>
+    <li *ngFor= "let movieComs of latestMovieComments"><p>{{movieComs.comment | slice:0:240}}</p> <span> przez: {{movieComs.author}} do {{movieComs.title}} kiedy {{movieComs.creationTime}}</span></li>
+  </ul>
+</div>
+<div class="recentComments">
+ <p> Najnowsza aktywność w sekcji serialów:</p>
+ <ul>
+   <li *ngFor= "let tvComs of latestTVShowComments"><p>{{tvComs.comment | slice:0:240}}</p> <span> przez: {{tvComs.author}} do {{tvComs.title}} kiedy {{tvComs.creationTime}}</span></li>
+ </ul>
+</div>
+</div>
+</div>

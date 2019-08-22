@@ -10,38 +10,54 @@ export class MovieService {
 
   constructor( private http: HttpClient) { }
 
-
-
   getAll(): Observable<any> {
-    return this.http.get('//localhost:8080/filmy');
+    return this.http.get('///192.168.2.10:8080/filmy');
+  }
+
+  getLatestMovies(): Observable<any> {
+    return this.http.get('///192.168.2.10:8080/filmy/najnowsze');
   }
 
   saveMovie(movie: object): Observable<string> {
-    return this.http.post('//localhost:8080/filmy/dodaj', movie, {responseType: 'text'});
+    return this.http.post('///192.168.2.10:8080/filmy/dodaj', movie, {responseType: 'text'});
   }
 
   getOne(movieId): Observable<any> {
-    return this.http.get('//localhost:8080/filmy/' + movieId);
+    return this.http.get('///192.168.2.10:8080/filmy/' + movieId);
   }
 
   deleteMovie(movieId): Observable<any> {
-    return this.http.delete('//localhost:8080/filmy/' + movieId, {responseType: 'text'});
+    return this.http.delete('///192.168.2.10:8080/filmy/' + movieId, {responseType: 'text'});
   }
 
   updateMovie(movieId, movie: object): Observable<string> {
-    return this.http.put('//localhost:8080/filmy/' + movieId, movie, {responseType: 'text'});
+    return this.http.put('///192.168.2.10:8080/filmy/' + movieId, movie, {responseType: 'text'});
   }
 
   getUserActivity(): Observable<any> {
-    return this.http.get('//localhost:8080/user/filmy/activity');
+    return this.http.get('///192.168.2.10:8080/user/filmy/activity');
   }
 
-  addMyMovie(movieId , mymovie: object): Observable<any> {
-    return this.http.post('//localhost:8080/addmymovie/' + movieId, mymovie );
+  addMyMovie(movieId , mymovie: object): Observable<string> {
+    return this.http.post('//192.168.2.10:8080/addmymovie/' + movieId, mymovie, {responseType: 'text'} );
   }
 
   deleteMyMovie(movieId: number): Observable<string> {
-    return this.http.delete('http://localhost:8080/deletemymovie/' + movieId, {responseType: 'text'});
+    return this.http.delete('///192.168.2.10:8080/deletemymovie/' + movieId, {responseType: 'text'});
+  }
+
+  getComments(myshowId): Observable<any> {
+    return this.http.get('///192.168.2.10:8080/filmy/' + myshowId + '/comments');
+  }
+
+  getLatestComments(): Observable<any> {
+    return this.http.get('///192.168.2.10:8080/getlatestmymovies');
+  }
+
+  searchMovies(title: string): Observable<any> {
+    const params = new URLSearchParams();
+    params.append('title', title);
+    return this.http.get('///192.168.2.10:8080/filmy/szukaj?' + params);
   }
 }
 

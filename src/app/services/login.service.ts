@@ -13,13 +13,17 @@ const httpOptions = {
 })
 export class LoginService {
 
-  private loginUrl = '//localhost:8080/zaloguj';
+  private loginUrl = '//192.168.2.10:8080';
 
   constructor(private http: HttpClient) { }
 
 
   attemptAuth(login: LoginUser): Observable<JwtResponse> {
-    return this.http.post<JwtResponse>(this.loginUrl, login, httpOptions);
+    return this.http.post<JwtResponse>(this.loginUrl + '/zaloguj', login, httpOptions);
+  }
+
+  registerNewUser(login: LoginUser): Observable<any> {
+    return this.http.post(this.loginUrl + '/user/add', login);
   }
 
 }
