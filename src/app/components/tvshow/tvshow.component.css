@@ -2,9 +2,10 @@
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 15px;
-    height: 800px;
+    height: auto;
     width: 86%;
     background-color: rgb(26, 26, 22);
+    padding: 2% 2% 2% 2%;
 }
 
 .activity{
@@ -27,7 +28,27 @@ a{
     color: black;
 }
 
-button{
+.sortButton{
+  margin-left: 15px;
+  width: 15%;
+  height: 25px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  float: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.sortButton:active{
+  background-color: blueviolet;
+}
+
+*:focus{
+  outline: none;
+}
+
+.deleteButton{
     background: none;
     border: none;
     cursor: pointer;
@@ -54,5 +75,17 @@ mat-expansion-panel p{
     font-size: 16px;
     display: block;
     float: left;
+}
+
+.filterButton{
+  background-color: dimgray;
+  border: none;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.filterInput{
+  background-color: dimgray;
+  border: none;
 }
 

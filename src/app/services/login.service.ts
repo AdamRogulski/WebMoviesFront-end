@@ -19,7 +19,7 @@ export class LoginService {
 
 
   attemptAuth(login: LoginUser): Observable<JwtResponse> {
-    return this.http.post<JwtResponse>(this.loginUrl + '/zaloguj', login, httpOptions);
+    return this.http.post<JwtResponse>(this.loginUrl + '/login', login, httpOptions);
   }
 
   registerNewUser(login: LoginUser): Observable<any> {
