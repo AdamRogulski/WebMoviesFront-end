@@ -68,7 +68,7 @@ select{
     margin-left: 40px;
     font-size: 15px;
     background-color: rgb(34, 32, 32);
-    border: none;
+    border: solid 1px white;
     color: white;
 }
 
@@ -80,7 +80,7 @@ select{
     width: 550px;
     resize: none;
     background-color: rgb(34, 32, 32);
-    border: none;
+    border: solid 1px white;
     color: white;
 }
 
@@ -108,4 +108,8 @@ select{
 
 .comments p{
     font-size: 12px;
+}
+
+*:focus{
+  outline: none;
 }

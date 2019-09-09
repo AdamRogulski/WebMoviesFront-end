@@ -2,6 +2,17 @@
   Twoje filmy:
 </p>
 <div class="container">
+  <button class="sortButton" *ngIf="!sortedByTitleAsc" (click)="sort('title')">Sortuj przez tytuł</button>
+  <button class="sortButton" *ngIf="sortedByTitleAsc" (click)="sort('titleDesc')">Sortuj przez tytuł</button>
+  <button class="sortButton" *ngIf="!sortedByRateAsc" (click)="sort('rate')">Sortuj przez ocene</button>
+  <button class="sortButton" *ngIf="sortedByRateAsc" (click)="sort('rateDesc')">Sortuj przez ocene</button>
+  <button class="sortButton" *ngIf="!sortedByDateAsc" (click)="sort('date')">Sortuj przez date</button>
+  <button class="sortButton" *ngIf="sortedByDateAsc" (click)="sort('dateDesc')">Sortuj przez date</button>
+  <form>
+    <input *ngIf="!filteredArray" class="filterInput" [(ngModel)]="searchTitle"  name="title">
+    <button *ngIf="!filteredArray" class="filterButton" (click)="findTitle()">Szukaj</button>
+    <button *ngIf="filteredArray" class="filterButton" (click)="resetFilter()">Reset</button>
+  </form>
   <mat-accordion *ngFor="let activ of movieActivity">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -18,7 +29,7 @@
       <p>Komentarz: {{activ.comment}}</p>
 
       <p>Czas: {{activ.creationTime}}r.</p>
-      <span class="right"><button (click)="deleteMyActivity(activ.id)"><i class="material-icons">clear</i></button></span>
+      <span class="right"><button class="deleteButton" (click)="deleteMyActivity(activ.id)"><i class="material-icons">clear</i></button></span>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

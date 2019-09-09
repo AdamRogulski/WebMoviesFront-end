@@ -18,13 +18,13 @@
 <div class="recentComments">
  <p> Najnowsza aktywność  w sekcji filmów:</p>
  <ul>
-    <li *ngFor= "let movieComs of latestMovieComments"><p>{{movieComs.comment | slice:0:240}}</p> <span> przez: {{movieComs.author}} do {{movieComs.title}} kiedy {{movieComs.creationTime}}</span></li>
+    <li *ngFor= "let movieComs of latestMovieComments"><p>{{(movieComs.comment.length > 240 ? (movieComs.comment | slice:0:240)+'...' : movieComs.comment)}}</p> <span> przez: {{movieComs.author}} do {{movieComs.title}} kiedy {{movieComs.creationTime}}</span></li>
   </ul>
 </div>
 <div class="recentComments">
  <p> Najnowsza aktywność w sekcji serialów:</p>
  <ul>
-   <li *ngFor= "let tvComs of latestTVShowComments"><p>{{tvComs.comment | slice:0:240}}</p> <span> przez: {{tvComs.author}} do {{tvComs.title}} kiedy {{tvComs.creationTime}}</span></li>
+   <li *ngFor= "let tvComs of latestTVShowComments"><p>{{(tvComs.comment | slice:0:240) + (tvComs.comment.length > 240 ? '...' : '')}}</p> <span> przez: {{tvComs.author}} do {{tvComs.title}} kiedy {{tvComs.creationTime}}</span></li>
  </ul>
 </div>
 </div>
